@@ -1,6 +1,6 @@
 # Claude Prompt Library
 
-Fifteen reusable prompts transcribed from two "ways to use Claude" carousels. Each file contains a ready-to-paste prompt — replace the `[BRACKETED]` placeholders with your own details before sending.
+Twenty-five reusable prompts transcribed from "ways to use Claude" carousels. Each file contains a ready-to-paste prompt — replace the `[BRACKETED]` placeholders with your own details before sending.
 
 ## Business & Productivity
 
@@ -26,3 +26,18 @@ Fifteen reusable prompts transcribed from two "ways to use Claude" carousels. Ea
 | 13 | [Fix Mental Blocks](13-fix-mental-blocks.md) | Root-cause analysis of procrastination, burnout, fear |
 | 14 | [Turn Confusion into Clarity](14-turn-confusion-into-clarity.md) | Breaking down concepts with metaphors and frameworks |
 | 15 | [Get a PhD-Level Breakdown](15-phd-level-breakdown.md) | First-principles learning with key papers and books |
+
+## Humanize AI Writing
+
+| # | Prompt | Use it for |
+|---|--------|------------|
+| 16 | [Rewrite It Like a Real Person](16-rewrite-like-a-real-person.md) | Making drafts sound spoken, not constructed |
+| 17 | [Fix the Flow of Thought](17-fix-the-flow-of-thought.md) | Rewriting so ideas move like a real mind |
+| 18 | [Pattern Breaker](18-pattern-breaker.md) | Removing AI-generated writing tells |
+| 19 | [Voice Builder](19-voice-builder.md) | Adding a clear point of view and personality |
+| 20 | [Make It Hit Hard](20-make-it-hit-hard.md) | Cutting weak lines so the message lands |
+| 21 | [The Credibility Test](21-the-credibility-test.md) | A skeptic's pass over too-polished writing |
+| 22 | [Humanizer Prompt](22-humanizer-prompt.md) | Quick fix for robotic phrasing and jargon |
+| 23 | [Tone Matcher](23-tone-matcher.md) | Rewriting in your own voice and energy |
+| 24 | [Simplicity Filter](24-simplicity-filter.md) | Shorter sentences, simpler words, scannable lines |
+| 25 | [Flow Fixer](25-flow-fixer.md) | Rhythm and transitions that read well out loud |
