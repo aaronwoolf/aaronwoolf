@@ -1,6 +1,6 @@
 # Claude Prompt Library
 
-Twenty-five reusable prompts transcribed from "ways to use Claude" carousels. Each file contains a ready-to-paste prompt — replace the `[BRACKETED]` placeholders with your own details before sending.
+Twenty-eight reusable prompts transcribed from "ways to use Claude" carousels. Each file contains a ready-to-paste prompt — replace the `[BRACKETED]` placeholders with your own details before sending.
 
 ## Business & Productivity
 
@@ -41,3 +41,11 @@ Twenty-five reusable prompts transcribed from "ways to use Claude" carousels. Ea
 | 23 | [Tone Matcher](23-tone-matcher.md) | Rewriting in your own voice and energy |
 | 24 | [Simplicity Filter](24-simplicity-filter.md) | Shorter sentences, simpler words, scannable lines |
 | 25 | [Flow Fixer](25-flow-fixer.md) | Rhythm and transitions that read well out loud |
+
+## Passive Income with Claude
+
+| # | Prompt | Use it for |
+|---|--------|------------|
+| 26 | [Review Videos on YouTube](26-youtube-review-videos.md) | 20 buyer-intent review video ideas with affiliate angles |
+| 27 | [Evergreen Answer Videos](27-evergreen-answer-videos.md) | Timeless videos answering high-demand search questions |
+| 28 | [Self-Publish a Book on Amazon](28-self-publish-a-book.md) | Book ideas, full outline, and a written chapter 1 |
