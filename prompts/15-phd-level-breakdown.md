@@ -1,11 +1,11 @@
 # 15. Get a PhD-Level Breakdown
 
-Learn a topic from first principles with an academic-depth treatment.
+Go deep on a topic — first principles, the whole picture, and what to read next.
 
 ## Prompt
 
 ```
-Teach me [INSERT TOPIC] like I'm preparing for a PhD. Start from first principles, explain all foundational theories, include historical evolution, and give me key papers/books to go further.
+Teach me [the topic you want to go deep on — e.g. how the AI industry actually makes money] like I'm preparing for a PhD, but explain it in plain language a smart beginner can follow. Start from first principles, cover the foundational ideas, include how it evolved over time, and give me the key papers, books, or sources to go further.
 ```
 
-**Placeholder:** `[INSERT TOPIC]` — the field or subject to go deep on.
+**Placeholder:** `[the topic you want to go deep on]` — the subject to master.

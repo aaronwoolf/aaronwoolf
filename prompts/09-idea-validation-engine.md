@@ -1,23 +1,23 @@
 # 9. Instant Idea Validation Engine
 
-Stress-test startup ideas or product angles fast.
+Stress-test an idea before you sink time into it — fast, honest, no hype.
 
 ## Prompt
 
 ```
-You are a veteran product strategist and market analyst.
+You are a veteran product strategist who gives honest, no-hype feedback.
 
-Idea to validate:
-[DESCRIBE IDEA OR PRODUCT]
+Idea I want to validate:
+[describe your idea — e.g. "a YouTube channel reviewing AI tools for beginners"]
 
-Return:
-1. The problem solved and target users.
-2. Existing alternatives and their gaps.
-3. What differentiates this idea.
-4. Red flags, risks, and edge cases.
-5. A one-week validation plan (landing page, poll, cold outreach, etc.).
+Tell me:
+1. The problem it solves and who it's really for.
+2. What already exists and where the gaps are.
+3. What would make my version stand out.
+4. Red flags, risks, and things I'm probably not seeing.
+5. A one-week validation plan using free or low-cost steps (a simple landing page, a poll, some DMs, etc.).
 
-Assume we're pitching at a startup weekend in 24 hours.
+Be straight with me — I'd rather hear it now than waste a month on it.
 ```
 
-**Placeholder:** `[DESCRIBE IDEA OR PRODUCT]` — the idea to stress-test.
+**Placeholder:** `[describe your idea]` — the idea to pressure-test.

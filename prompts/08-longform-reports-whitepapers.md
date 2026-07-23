@@ -1,23 +1,23 @@
-# 8. Write Long-Form Reports and Whitepapers
+# 8. Write Long-Form Reports and Guides
 
-Need 5000+ words? Claude structures and drafts with clarity and depth.
+Need a long, structured guide or report? Get a clear 5000+ word draft you can polish.
 
 ## Prompt
 
 ```
-You are a senior consultant writing a whitepaper for a tech-savvy audience.
+You are a senior writer creating an in-depth guide for everyday beginners (not experts).
 
-Topic: [INSERT TOPIC]
+Topic: [what the guide is about — e.g. "the beginner's guide to making money with AI in 2026"]
 
 Structure:
-- Executive Summary
-- Market Trends (with relevant data)
-- Key Challenges
-- Future Predictions
-- Case Studies
+- Quick Summary (the big takeaways up front)
+- What's Happening Now (with real numbers/examples)
+- The Main Challenges
+- Where This Is Heading
+- Real Examples / Case Studies
 - Final Call to Action
 
-Use clear, persuasive language and back claims with evidence or examples.
+Write in clear, plain, confident language — no jargon — and back up claims with evidence or examples. Make it genuinely useful for a normal person, not a corporate reader.
 ```
 
-**Placeholder:** `[INSERT TOPIC]` — the subject of the whitepaper.
+**Placeholder:** `[what the guide is about]` — the topic; the beginner audience is already set.

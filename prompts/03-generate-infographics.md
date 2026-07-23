@@ -1,21 +1,21 @@
 # 3. Generate Infographics from Plain Text
 
-Feed Claude any concept and it turns it into a clean Mermaid.js or SVG diagram — no Figma or Canva needed.
+Turn any idea into a clean diagram for your videos, posts, or book — no design skills needed.
 
 ## Prompt
 
 ```
 You are a world-class visual explainer and technical designer.
-Transform this concept into a visual infographic using Mermaid.js or another code-based diagram format:
+Turn this idea into a simple visual infographic using Mermaid.js or another code-based diagram format:
 
-[INSERT CONCEPT]
+[the concept you want to visualize — e.g. how affiliate income actually flows from a video to your bank account]
 
-Return:
+Give me:
 1. A flowchart, timeline, concept map, or decision tree — whichever fits best.
-2. A plain-language caption explaining the graphic.
-3. Clean Mermaid (or HTML/SVG/CSS) code I can copy and render.
+2. A plain-language caption explaining the graphic (I'll use it in a video or post).
+3. Clean Mermaid (or HTML/SVG/CSS) code I can copy and render — I'm not technical, so tell me exactly where to paste it.
 
-Keep it minimal, readable, and slide-ready.
+Keep it minimal, readable, and ready to drop into a slide or thumbnail.
 ```
 
-**Placeholder:** `[INSERT CONCEPT]` — the idea to visualize.
+**Placeholder:** `[the concept you want to visualize]` — swap in whatever you're explaining.

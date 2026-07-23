@@ -1,11 +1,11 @@
 # 13. Fix Mental Blocks
 
-Analyze a personal struggle like a cognitive scientist and design a way out.
+Get to the root of something that's holding you back — and a plan to break it.
 
 ## Prompt
 
 ```
-I've been struggling with [INSERT PERSONAL ISSUE: procrastination, burnout, fear, etc.]. Analyze it like a cognitive scientist. Identify the root causes, the behavioural patterns behind it, and design a habit loop to eliminate it.
+I've been struggling with [the thing holding you back — e.g. procrastination, burnout, fear of posting]. Analyze it like a cognitive scientist. Find the root causes, the behaviour patterns keeping it going, and design a simple habit loop I can actually follow to break out of it. Keep it practical and judgment-free.
 ```
 
-**Placeholder:** `[INSERT PERSONAL ISSUE]` — the struggle to work on.
+**Placeholder:** `[the thing holding you back]` — I left this open on purpose; only you can fill it in.

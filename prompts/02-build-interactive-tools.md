@@ -1,24 +1,25 @@
 # 2. Build Interactive Tools and Apps Without Code
 
-Describe your idea and Claude scaffolds the UI, logic, and deployment steps — no coding required.
+Turn an idea into a working little tool — even though you don't code — with copy-paste steps.
 
 ## Prompt
 
 ```
-You are a senior software architect who excels at building no-code and low-code systems with HTML, JavaScript, and Web APIs.
+You are a senior software architect who's great at building simple no-code and low-code tools with HTML, JavaScript, and free web tools.
 
-Task:
-Design a fully working interactive tool based on this idea:
-[DESCRIBE YOUR TOOL IDEA]
+I'm not a coder — I'm on a Windows laptop and I need this explained simply and copy-paste ready.
 
-Deliverables:
+Build me a fully working interactive tool based on this idea:
+[describe your tool idea — e.g. a free "which AI tool should I use?" quiz for my audience]
+
+Give me:
 1. A plain-English explanation of how the tool works.
-2. A step-by-step plan to implement it with Claude or a no-code platform.
-3. Exact HTML/CSS/JS code if relevant.
-4. UX and design improvement tips.
-5. Instructions to generate a shareable, embed-ready version.
+2. Step-by-step instructions to build it (with Claude or a free no-code platform).
+3. The exact HTML/CSS/JS code if relevant, ready to paste.
+4. Simple tips to make it look and feel better.
+5. How to make a shareable, embed-ready version I can put in a video description or post.
 
-Imagine you are shipping an MVP for a startup demo.
+Assume I'm shipping a quick, free tool to grow an audience — keep it beginner-friendly and low-cost.
 ```
 
-**Placeholder:** `[DESCRIBE YOUR TOOL IDEA]` — what the tool should do.
+**Placeholder:** `[describe your tool idea]` — the one thing that changes each time; the rest is set up for you.

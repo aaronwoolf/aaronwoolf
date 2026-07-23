@@ -1,11 +1,11 @@
 # 11. Understand Anything Like a Genius
 
-Break down any topic with advanced analogies and test yourself at an expert level.
+Break any topic wide open with great analogies — then get quizzed to make it stick.
 
 ## Prompt
 
 ```
-I want to understand [INSERT TOPIC] as if I were a genius. Break down the concept using advanced analogies, real-world applications, counterexamples, and multiple perspectives, then test my understanding with expert-level questions.
+I want to really understand [the topic you're learning — e.g. how AI tools actually make money]. Break it down for me using clear, everyday analogies, real-world examples, counterexamples, and a few different angles. Keep the language simple — I'm smart but not an expert. Then test my understanding with a few sharp questions.
 ```
 
-**Placeholder:** `[INSERT TOPIC]` — the topic to understand deeply.
+**Placeholder:** `[the topic you're learning]` — whatever you want to understand.

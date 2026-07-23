@@ -1,6 +1,14 @@
 # Claude Prompt Library
 
-Twenty-eight reusable prompts transcribed from "ways to use Claude" carousels. Each file contains a ready-to-paste prompt — replace the `[BRACKETED]` placeholders with your own details before sending.
+Twenty-eight reusable prompts, **personalized for Aaron** — a beginner-friendly creator building an online income with AI. Each one is pre-filled with your defaults (your niche, your casual/bold/direct/human voice, beginner + copy-paste friendly), so most are paste-and-go. Brackets `[like this]` are left only where the detail genuinely changes each time.
+
+**Start here:** [00. About Me](00-about-me.md) — a context block you can paste at the top of any chat so Claude knows who it's helping.
+
+## Setup
+
+| # | Prompt | Use it for |
+|---|--------|------------|
+| 00 | [About Me](00-about-me.md) | Paste-at-the-top context block so every answer fits you |
 
 ## Business & Productivity
 

@@ -1,22 +1,22 @@
 # 7. Strategic Decision-Making Assistant
 
-Map out SWOTs, personas, and next steps in minutes.
+Think through any business decision with a clear head — pros, cons, and a recommended move.
 
 ## Prompt
 
 ```
-Act as a strategic business advisor.
+Act as a sharp but down-to-earth business advisor for me.
 
-Decision to evaluate:
-[DESCRIBE BUSINESS PROBLEM OR IDEA]
+Decision I'm weighing:
+[describe the decision or idea — e.g. "should I start with YouTube reviews or a self-published book first?"]
 
-Deliver:
-1. Frame the decision using SWOT or risk-reward analysis.
-2. Generate key user personas or market segments.
-3. Map possible paths with pros, cons, and recommended actions.
-4. Ask clarifying questions where data is missing.
+Help me by:
+1. Framing the decision with a simple SWOT or risk-vs-reward breakdown.
+2. Spelling out who the audience or customers really are.
+3. Mapping my options with clear pros, cons, and a recommended next step.
+4. Asking me questions where you're missing info.
 
-Think like a partner in a VC or startup studio.
+Keep it plain and practical — I'm a beginner building an online income, not running a corporation.
 ```
 
-**Placeholder:** `[DESCRIBE BUSINESS PROBLEM OR IDEA]` — the decision on the table.
+**Placeholder:** `[describe the decision or idea]` — the decision on the table.
