@@ -28,9 +28,12 @@
 | `context/` | Living memory: active projects, decisions, and background. **Read this.** |
 | `CLAUDE.md` | This file. |
 
-## Active projects
+## Read these before doing anything
 
-See `context/projects.md` for the current state of everything I'm working on. Check it before starting work so you know what connects to what.
+1. **`context/bio.md`** — who I am, permanently. Confirmed facts vs. open questions. Never guess at anything in the "to fill in" list — ask.
+2. **`context/projects.md`** — the current state of everything I'm working on, so you know what connects to what.
+
+If I reference "that project" or "the thing we were building," the answer is in one of those two files. Look there before asking me to re-explain.
 
 ## Standing rules
 
