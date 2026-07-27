@@ -1,6 +1,6 @@
 # Claude Prompt Library
 
-Twenty-eight reusable prompts, **personalized for Aaron** — a beginner-friendly creator building an online income with AI. Each one is pre-filled with your defaults (your niche, your casual/bold/direct/human voice, beginner + copy-paste friendly), so most are paste-and-go. Brackets `[like this]` are left only where the detail genuinely changes each time.
+Forty reusable prompts, **personalized for Aaron** — a beginner-friendly creator building an online income with AI. Each one is pre-filled with your defaults (your niche, your casual/bold/direct/human voice, beginner + copy-paste friendly), so most are paste-and-go. Brackets `[like this]` are left only where the detail genuinely changes each time.
 
 **Start here:** [00. About Me](00-about-me.md) — a context block you can paste at the top of any chat so Claude knows who it's helping.
 
@@ -57,3 +57,27 @@ Twenty-eight reusable prompts, **personalized for Aaron** — a beginner-friendl
 | 26 | [Review Videos on YouTube](26-youtube-review-videos.md) | 20 buyer-intent review video ideas with affiliate angles |
 | 27 | [Evergreen Answer Videos](27-evergreen-answer-videos.md) | Timeless videos answering high-demand search questions |
 | 28 | [Self-Publish a Book on Amazon](28-self-publish-a-book.md) | Book ideas, full outline, and a written chapter 1 |
+
+## Life & Personal Growth
+
+| # | Prompt | Use it for |
+|---|--------|------------|
+| 29 | [Career Clarity & Purpose Finder](29-career-clarity-purpose-finder.md) | 10 deep questions → career paths + a 90-day plan |
+| 30 | [Personalized Learning Roadmap](30-personalized-learning-roadmap.md) | 12-week beginner-to-advanced plan for any skill |
+| 31 | [Relationship Conflict Resolver](31-relationship-conflict-resolver.md) | See their side and 3 ways to talk it out |
+| 32 | [Financial Freedom Blueprint](32-financial-freedom-blueprint.md) | Budget, debt payoff, savings, and earning more |
+| 33 | [Health & Fitness Transformation](33-health-fitness-transformation.md) | 8-week meal, workout, sleep, and stress plan |
+| 34 | [Productivity & Time Optimizer](34-productivity-time-optimizer.md) | Time-blocked schedule around your real goals |
+| 35 | [Emotional Intelligence & Mindset Coach](35-emotional-intelligence-mindset-coach.md) | Root causes, reframes, and a 5-minute technique |
+| 36 | [Social Skills & Communication Mastery](36-social-skills-communication-mastery.md) | Techniques, drills, and a 30-day confidence challenge |
+
+## Wealth Mode — leverage & ownership
+
+Naval-inspired diagnostics. **Also available as a full skill:** [`.claude/skills/wealth-mode`](../.claude/skills/wealth-mode/SKILL.md) — just say "run wealth mode" instead of pasting these.
+
+| # | Prompt | Use it for |
+|---|--------|------------|
+| 37 | [The Specific Knowledge Excavator](37-specific-knowledge-excavator.md) | Find the rare thing only you know |
+| 38 | [The Leverage Stack Auditor](38-leverage-stack-auditor.md) | Score your work on the four levers |
+| 39 | [The Productize Yourself Blueprint](39-productize-yourself-blueprint.md) | Build something that sells without you |
+| 40 | [The Time-for-Money Leak Detector](40-time-for-money-leak-detector.md) | Find hours you rent instead of invest |
