@@ -26,11 +26,13 @@ caleb/
 │   ├── agent.py                  # Claude Agent SDK session wrapper w/ PreToolUse gate
 │   ├── heartbeat.py              # cron tick: build pending queue, wake agent if non-empty
 │   ├── brief.py                  # daily brief assembly
+│   ├── cli.py                     # onboarding: add-user/contact/medication/appointment
 │   └── tools/
 │       ├── gmail_client.py       # all Gmail API traffic: auth, labels, fetch, modify
 │       ├── gmail_observe.py      # L0: classify + label under Caleb/, never act
 │       └── sms.py                # Twilio send + approval replies
 ├── scripts/gmail_auth.py         # one-time OAuth flow; prints GMAIL_REFRESH_TOKEN
+├── tests/                        # pytest — policy gate, brief text, CLI/journal
 └── .env.example
 ```
 
@@ -42,8 +44,19 @@ caleb/
    Use a Google Workspace account with an **Internal** OAuth app to skip
    restricted-scope verification during self-test.
 4. `python -m caleb.db init` — creates `caleb.sqlite3` from `db/schema.sql`.
-5. Cron (the BaddieBroker autopilot pattern):
+5. Onboard yourself (no more hand-written SQL):
+   ```
+   python -m caleb.cli init-user aaron --name "Aaron Woolf" --phone +1555...
+   python -m caleb.cli add-contact aaron --name "Jane Woolf" --relation daughter \
+       --phone +1555... --trusted
+   python -m caleb.cli add-medication aaron --drug Lisinopril --dose 10mg --schedule "daily 8am"
+   python -m caleb.cli add-appointment aaron --provider "Dr. Chen" --starts-at 2026-08-05T14:00:00
+   python -m caleb.cli list aaron
+   ```
+6. Cron (the BaddieBroker autopilot pattern):
    `*/15 * * * *  cd .../caleb && .venv/bin/python -m caleb.heartbeat`
+7. `pytest` — runs the policy-gate, brief, and CLI/journal tests against an
+   in-memory DB (no credentials needed).
 
 ## Autonomy rules (do not relax casually)
 
