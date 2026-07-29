@@ -48,24 +48,19 @@ def _classify(client: Anthropic, model: str, subject: str, sender: str, snippet:
 
 
 def observe(con, cfg) -> list[dict]:
-    """Classify + label new mail. Returns the list of triaged items.
-
-    TODO(week 1): wire the Gmail API client here (google-api-python-client):
-      - users.messages.list with q="newer_than:1d -label:Caleb/State/Triaged"
-      - ensure the Caleb/* label set exists (users.labels.create)
-      - users.messages.modify to apply category + state labels
-    The classification/journal path below is final; only the transport is stubbed.
-    """
+    """Classify + label new mail. Returns the list of triaged items."""
     if not os.environ.get("GMAIL_REFRESH_TOKEN"):
         db.journal(con, cfg.user_ref, "system", "gmail_observe_skipped",
                    {"reason": "no GMAIL_REFRESH_TOKEN configured"})
         return []
 
+    from . import gmail_client
+
     client = Anthropic()
     triage_model = cfg.model.get("triage", "claude-haiku-4-5")
     triaged: list[dict] = []
 
-    for m in _fetch_new_messages():  # -> [{id, thread_id, sender, subject, snippet}]
+    for m in gmail_client.fetch_untriaged():
         verdict = _classify(client, triage_model, m["subject"], m["sender"], m["snippet"])
         state = "quarantined" if verdict["category"] == "Suspected-Scam" else "triaged"
         con.execute(
@@ -74,16 +69,8 @@ def observe(con, cfg) -> list[dict]:
             (cfg.user_ref, m["id"], m.get("thread_id"), verdict["category"], state),
         )
         con.commit()
-        _apply_labels(m["id"], verdict["category"], state)
+        gmail_client.apply_labels(m["id"], verdict["category"], state)
         db.journal(con, cfg.user_ref, "agent", "label_email",
                    {"message_id": m["id"], **verdict, "state": state})
         triaged.append({**m, **verdict, "state": state})
     return triaged
-
-
-def _fetch_new_messages() -> list[dict]:
-    raise NotImplementedError("wire Gmail API here (see observe() docstring)")
-
-
-def _apply_labels(message_id: str, category: str, state: str) -> None:
-    raise NotImplementedError("wire Gmail API here (see observe() docstring)")

@@ -10,9 +10,11 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta
 
-from . import db
+from . import brief, db
 from .registry import load_all
 from .tools import gmail_observe, sms
+
+BRIEF_HOUR_UTC = 15  # ~8am PT; per-user preference lands with the users table
 
 
 def pending_reminders(con, user_id: str) -> list[dict]:
@@ -54,6 +56,16 @@ def tick() -> None:
                 (item["stage"], item["appt"]["id"]),
             )
             con.commit()
+
+        # one brief per day, on the first tick after the brief hour
+        now = datetime.utcnow()
+        if now.hour >= BRIEF_HOUR_UTC:
+            sent_today = con.execute(
+                "SELECT 1 FROM journal WHERE user_id=? AND action='daily_brief' "
+                "AND date(ts)=date('now') LIMIT 1", (uid,),
+            ).fetchone()
+            if not sent_today:
+                brief.send(con, cfg)
 
         db.journal(con, uid, "system", "heartbeat",
                    {"mail": len(work.get("mail", [])), "reminders": len(reminders)})

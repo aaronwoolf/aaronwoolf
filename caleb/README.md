@@ -27,8 +27,10 @@ caleb/
 │   ├── heartbeat.py              # cron tick: build pending queue, wake agent if non-empty
 │   ├── brief.py                  # daily brief assembly
 │   └── tools/
+│       ├── gmail_client.py       # all Gmail API traffic: auth, labels, fetch, modify
 │       ├── gmail_observe.py      # L0: classify + label under Caleb/, never act
 │       └── sms.py                # Twilio send + approval replies
+├── scripts/gmail_auth.py         # one-time OAuth flow; prints GMAIL_REFRESH_TOKEN
 └── .env.example
 ```
 
