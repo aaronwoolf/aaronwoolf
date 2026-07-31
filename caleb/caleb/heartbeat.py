@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta
 
-from . import brief, db
+from . import approvals, brief, db
 from .registry import load_all
 from .tools import gmail_observe, sms
 
@@ -47,6 +47,9 @@ def tick() -> None:
             if new_mail:
                 work["mail"] = new_mail
 
+        # Silence is not consent — drop anything the user never answered.
+        expired = approvals.expire_stale(con, cfg)
+
         reminders = pending_reminders(con, uid)
         for item in reminders:
             body = sms.reminder_text(item)
@@ -68,7 +71,8 @@ def tick() -> None:
                 brief.send(con, cfg)
 
         db.journal(con, uid, "system", "heartbeat",
-                   {"mail": len(work.get("mail", [])), "reminders": len(reminders)})
+                   {"mail": len(work.get("mail", [])), "reminders": len(reminders),
+                    "approvals_expired": expired})
         con.close()
 
 

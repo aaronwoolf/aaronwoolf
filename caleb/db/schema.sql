@@ -77,6 +77,22 @@ CREATE TABLE IF NOT EXISTS journal (
   approval_state TEXT                      -- n/a | pending | approved | declined | expired
 );
 
+-- Parked actions waiting on a human "yes". The journal records the events
+-- (append-only); this table holds the mutable state of the request itself.
+CREATE TABLE IF NOT EXISTS approvals (
+  id          TEXT PRIMARY KEY,
+  user_id     TEXT NOT NULL,
+  action      TEXT NOT NULL,            -- send_email, place_call, book_appointment...
+  summary     TEXT NOT NULL,            -- plain-language line read/texted to the user
+  payload     TEXT NOT NULL,            -- JSON: the exact tool args to run on approval
+  state       TEXT NOT NULL DEFAULT 'pending',  -- pending|approved|declined|expired
+  created_at  TEXT NOT NULL DEFAULT (datetime('now')),
+  resolved_at TEXT,
+  channel     TEXT                      -- sms | voice — how the yes/no arrived
+);
+
+CREATE INDEX IF NOT EXISTS idx_approvals_pending ON approvals(user_id, state, created_at);
+
 -- Email pipeline state (mirrors the Caleb/State/* Gmail labels).
 CREATE TABLE IF NOT EXISTS email_state (
   user_id    TEXT NOT NULL,

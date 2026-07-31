@@ -26,6 +26,7 @@ caleb/
 │   ├── agent.py                  # Claude Agent SDK session wrapper w/ PreToolUse gate
 │   ├── heartbeat.py              # cron tick: build pending queue, wake agent if non-empty
 │   ├── brief.py                  # daily brief assembly
+│   ├── approvals.py               # park an action → text the user → yes/no → run or drop
 │   ├── cli.py                     # onboarding: add-user/contact/medication/appointment
 │   └── tools/
 │       ├── gmail_client.py       # all Gmail API traffic: auth, labels, fetch, modify
@@ -66,3 +67,7 @@ caleb/
   quarantined senders, and **changes to Caleb's own config or contacts**
   always require a live human approval.
 - Every action — every send, call, label, booking — writes a `journal` row.
+- **Silence is never consent.** An `ask` verdict parks the action in `approvals`
+  and texts the user a plain-language summary. It runs only on an explicit yes;
+  an ambivalent reply ("yes but actually no") is treated as a no; anything
+  unanswered for 48h is expired by the heartbeat and never sent.
