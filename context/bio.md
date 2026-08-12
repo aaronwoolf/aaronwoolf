@@ -50,6 +50,7 @@ Casual, bold, direct, human. Plain language, no corporate jargon, never salesy. 
 - Age / location / time zone:
 - Day job or current income sources:
 - Hours per week available for this:
+- **Laptop make/model:** unknown — needs the three lines from `msinfo32` (System Manufacturer, System Model, Processor). Checked Gmail 2026-08-12: no purchase receipt found (the 2023 Best Buy order was the Toshiba 65" TV). Why it matters: Aaron has a large monitor he wants to hook up and asked whether an external GPU (eGPU) would work. Likely answer: he just needs an HDMI or USB-C cable, not an eGPU — eGPUs require Thunderbolt and only matter for gaming/3D. Resolve when he's back at the laptop.
 
 ### Money
 - Income, expenses, debt, savings (for prompt #32):
