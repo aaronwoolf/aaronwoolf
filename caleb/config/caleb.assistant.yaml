@@ -1,0 +1,46 @@
+# The assistant "registry row" — BaddieBroker's investor profile, reborn.
+# One file like this per end user; user_ref keys every DB row and memory dir.
+
+persona:
+  name: Caleb
+  tone: "warm, patient, unhurried; short sentences; never jargon"
+  speech_rate: 0.9          # applied to TTS when voice lands (week 3-4)
+
+model:
+  main: claude-opus-5        # reasoning, drafting, health explanation
+  triage: claude-haiku-4-5   # bulk email classification
+  voice: claude-sonnet-5     # latency-sensitive live turns (later)
+
+user_ref: aaron
+
+channels:
+  sms: true
+  email: true
+  voice: false               # flips on in week 3-4
+
+# Approval policy = the old risk limits. Levels: allow | ask | never.
+# "ask" = draft it, request SMS/voice approval, expire after 48h of silence.
+# "never" = the action does not exist for this agent regardless of prompt.
+approval_policy:
+  read_email: allow
+  label_email: allow
+  send_email: ask
+  send_sms_to_user: allow    # nudges/briefs to the user themselves
+  place_call: ask
+  book_appointment: ask
+  pay_bill: never            # visibility only until POA + payment rails exist
+  modify_contacts: never     # config mutations are privileged operations
+  modify_policy: never
+
+# Email autonomy ladder: L0 observe → L1 triage → L2 draft → L3 whitelist auto-send.
+# Promotion is manual, per category, after 25 consecutive uncorrected approvals.
+email_autonomy:
+  level: L0
+  category_overrides: {}     # e.g. {Newsletters: L1} once L0 review looks clean
+
+heartbeat: "*/15 * * * *"
+
+guardrails:
+  no_diagnosis: true         # explain + question-prep only; hard-coded 911 phrases escalate
+  quarantine_never_read_aloud: true
+  scam_escalation_contact: null   # contact id once contacts exist
